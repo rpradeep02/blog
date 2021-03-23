@@ -1,6 +1,41 @@
 .center {
   text-align: center;
 }
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+.spacing {
+  padding-bottom: 2rem;
+}
+
+.spacing-btn {
+  padding-left: 1rem;
+}
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-left: 1rem;
+  text-decoration: none;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
 .footer {
   position: fixed;
   left: 0;
