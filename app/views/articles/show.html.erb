@@ -4,7 +4,7 @@
 <% if @article.user %>
   <ul class="listing">
     <div class='row align'>
-      <div class="card-body md-4 offset-4">
+      <div class="card-body offset-1">
         <li>created by:</li>
         <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %>
         <li class="article-title">
