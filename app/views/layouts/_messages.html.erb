@@ -1,6 +1,6 @@
-<div class="container">
+
   <div class="row">
-    <div class="col-10 ">
+    <div class="col-8 offset-2">
       <% flash.each do |name, msg| %>
         <div class='alert alert-<%="#{name}" %> alert-dismissible fade show' role="alert">
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -9,4 +9,4 @@
       <% end %>
     </div>
   </div>
-</div>
+
