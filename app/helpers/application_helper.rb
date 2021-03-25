@@ -1,6 +1,6 @@
 module ApplicationHelper
   def gravatar_for(user, options = { size: 80})
-    default_url = "#{root_url}'public/images/1.png'"
+    default_url = "#{root_url}/images/1.png"
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
     gravatar_url= "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}&d=#{CGI.escape(default_url)}"

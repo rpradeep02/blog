@@ -34,5 +34,13 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
+        <ul class="navbar-nav me-auto mb-4 mb-lg-2">
+          <li class="nav-item">
+            <%= link_to "Log in", login_path , class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+           <%= link_to "Log out", logout_path, method: :delete, class:"nav-link" %>
+          </li>
+        </ul>
   </div>
 </nav>
