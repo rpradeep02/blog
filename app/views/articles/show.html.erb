@@ -4,7 +4,7 @@
 <% if @article.user %>
   <ul class="listing">
     <div class='row align'>
-      <div class="card-body offset-1">
+      <div class="card-body offset-4">
         <li>created by:</li>
         <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %>
         <li class="article-title">
@@ -17,10 +17,20 @@
 <% end %>
   <h4 class="center description"><strong>Description:</strong></h4>
   <hr>
- <%= simple_format(@article.description) %>
+ 
+  <%= simple_format(@article.description) %> </br>
+  <div class="article-body">
+ 
+      <small>Created by: <%= @article.user.username if @article.user %>,</br>
+              <%= time_ago_in_words(@article.created_at)%> ago,</br>
+              last updated: <%= time_ago_in_words(@article.updated_at)%> ago</small>
+    
+  </div>
   <div class="article-actions">
-    <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
-    <%= link_to "Back to article list ", articles_path, class:"btn btn-success" %>
-    <%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Are you sure?" }, class:"btn btn-danger"%>
+    <% if logged_in? && current_user == @article.user %>
+      <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
+      <%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Are you sure?" }, class:"btn btn-danger"%>
+    <% end %>
+    <%= link_to "View all article list ", articles_path, class:"btn btn-success" %>
   </div>
 </div>
