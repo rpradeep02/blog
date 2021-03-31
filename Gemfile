@@ -7,7 +7,7 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'rubocop-rails'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0'
 gem 'bootstrap', '~> 5.0.0.beta2'
